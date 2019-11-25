@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="main.css" type="text/css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <video autoplay muted loop id="vid">
+        <source src="Wavez.mp4" type="video/mp4" />
+      </video>
+      <div class="contentContainer">
+        <div class="nav">
+          <div class="item"></div>
+        </div>
+
+        <div class="content">
+          <div id="om"></div>
+        </div>
+
+        <div class="time">
+          <div class="item"></div>
+        </div>
+      </div>
+    </div>
+
+    <template id="tempSection">
+      <div id="itemTemp" class="item">
+        <h1 id="titleTemp"></h1>
+        <p id="columnTemp"></p>
+      </div>
+    </template>
+    <script src="databaseScript.js"></script>
+  </body>
+</html>
