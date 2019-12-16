@@ -6,10 +6,6 @@ body {
   position: relative;
 }
 
-#pause {
-  position: absolute;
-}
-
 .container {
   position: relative;
 }
@@ -61,14 +57,26 @@ body {
 }
 
 .item {
-  height: 300px;
+  font-size: 17px;
+  line-height: 1.6;
+  height: 200px;
   max-width: 100%;
   margin-bottom: 20px;
   margin-right: 20px;
   padding: 30px;
-
-  background-color: white;
+  color: white;
+  border: 12px white solid;
   transition: all 0.2s ease-in-out;
+  font-family: "Raleway", sans-serif;
+}
+
+.itemList {
+  height: 300px;
+}
+
+h2 {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
 }
 
 #titleTemp {
@@ -125,4 +133,20 @@ body {
 
 #info {
   grid-area: 6/2/6/2;
+}
+
+#pause {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 40%;
+  left: 45%;
+  opacity: 0.1;
+  transition: 0.5s all;
+  outline: none;
+}
+
+.videoContainer:hover #pause {
+  opacity: 1;
+  transition: 0.5s all;
 }

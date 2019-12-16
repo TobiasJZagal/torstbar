@@ -21,13 +21,9 @@ function get() {
 }
 
 function post(item) {
-  let temp = document.querySelector("#tempSection").cloneNode(true).content;
-
-  temp.querySelector("#titleTemp").textContent += item.title.rendered;
-  temp.querySelector("#columnTemp").innerHTML += item.excerpt.rendered;
-
   if (item.acf.category == "about") {
-    document.querySelector("#om").appendChild(temp);
+    document.querySelector(".OmHeadline").textContent = item.acf.headline;
+    document.querySelector(".OmText").textContent = item.acf.text;
   }
 }
 
@@ -35,9 +31,9 @@ function get2() {
   fetch("http://tobiasjzagal.dk/torst/wordpress/wp-json/wp/v2/pages")
     .then(res => res.json())
     .then(dataW => {
-      //console.log(dataW[0].title.rendered);
-      //console.log(dataW[0].acf.number);
-      // dataW.forEach(post);
+      console.log(dataW[1].title.rendered);
+      console.log(dataW[0].acf.number);
+      dataW.forEach(post);
     });
 }
 
@@ -45,5 +41,26 @@ let pauseButton = document.getElementById("pause");
 let video = document.getElementById("vid");
 
 pauseButton.addEventListener("click", () => {
-  video.pause();
+  if (video.paused || video.ended) {
+    video.play();
+    pauseButton.src = "icons/pause.png";
+  } else {
+    video.pause();
+    pauseButton.src = "icons/play.png";
+  }
 });
+
+let carouselGlide = document.querySelector(".glide");
+
+new Glide(".glide", {
+  type: "carousel",
+  startAt: 0,
+  perView: 3
+}).mount();
+/*
+new Glide(".glide", {
+  type: "carousel",
+  startAt: 0,
+  perView: 6
+}).mount();
+*/
