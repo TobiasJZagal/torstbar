@@ -9,17 +9,48 @@
   </head>
   <body>
     <div class="container">
-      <video autoplay muted loop id="vid">
-        <source src="Concerting.mp4" type="video/mp4" />
-      </video>
+      <div class="videoContainer">
+        <button type="button" id="pause">Pause</button>
+        <video autoplay muted loop id="vid">
+          <source src="Concerting.mp4" type="video/mp4" />
+        </video>
+      </div>
       <div class="contentContainer">
-        <div class="nav">
-          <div class="item"></div>
-        </div>
-
         <div class="content">
-          <div id="om"></div>
-          <div id="jul"></div>
+          <div id="om" class="contentSection">
+            <h2>OM Section</h2>
+            <div class="item">OM</div>
+          </div>
+
+          <div id="menu" class="contentSection">
+            <h2>MENU Section</h2>
+            <div class="item">MENU</div>
+          </div>
+
+          <div id="booking" class="contentSection">
+            <h2>BOOKING Section</h2>
+            <div class="item">BOOKING</div>
+          </div>
+
+          <div id="list" class="contentSection">
+            <h2>LIST Section</h2>
+            <div class="item">LIST</div>
+          </div>
+
+          <div id="events" class="contentSection">
+            <h2>EVENTS Section</h2>
+            <div class="item">EVENTS</div>
+          </div>
+
+          <div id="map" class="contentSection">
+            <h2>MAP Section</h2>
+            <div class="item">MAP</div>
+          </div>
+
+          <div id="info" class="contentSection">
+            <h2>INFO Section</h2>
+            <div class="item">INFO</div>
+          </div>
         </div>
 
         <div class="time">

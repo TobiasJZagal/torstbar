@@ -28,8 +28,6 @@ function post(item) {
 
   if (item.acf.category == "about") {
     document.querySelector("#om").appendChild(temp);
-  } else if (item.acf.category == "special page") {
-    document.querySelector("#jul").appendChild(temp);
   }
 }
 
@@ -39,6 +37,13 @@ function get2() {
     .then(dataW => {
       //console.log(dataW[0].title.rendered);
       //console.log(dataW[0].acf.number);
-      dataW.forEach(post);
+      // dataW.forEach(post);
     });
 }
+
+let pauseButton = document.getElementById("pause");
+let video = document.getElementById("vid");
+
+pauseButton.addEventListener("click", () => {
+  video.pause();
+});

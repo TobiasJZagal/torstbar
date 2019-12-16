@@ -2,6 +2,14 @@ body {
   margin: 0;
 }
 
+.videoContainer {
+  position: relative;
+}
+
+#pause {
+  position: absolute;
+}
+
 .container {
   position: relative;
 }
@@ -26,16 +34,19 @@ body {
   height: 100%;
   margin-top: -200px;
   grid-area: 1/2/1/2;
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
 }
 
 .time {
   margin-top: -200px;
-  grid-area: 1/3/1/3;
+  grid-area: 1/4/1/4;
 }
 
 .time .item {
+  position: sticky;
+  top: 200px;
   width: 250px;
-  margin: 30px;
 }
 
 .contentContainer {
@@ -46,18 +57,18 @@ body {
   background-color: black;
   height: 100%;
   display: grid;
-  grid-template: 1fr/ 40px 2fr 1fr;
+  grid-template: 1fr/ 50px 2fr 50px 400px;
 }
 
 .item {
-  display: grid;
-  margin: 30px;
   height: 300px;
   max-width: 100%;
-  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 30px;
+
   background-color: white;
   transition: all 0.2s ease-in-out;
-  grid-template: 80px 1fr/ 20px 1fr;
 }
 
 #titleTemp {
@@ -82,4 +93,36 @@ body {
 #titleTemp,
 #columnTemp {
   margin: 20px;
+}
+
+#om {
+  grid-area: 1/1/1/3;
+}
+
+.contentSection h2 {
+  color: white;
+}
+
+#menu {
+  grid-area: 2/1/2/1;
+}
+
+#booking {
+  grid-area: 2/2/2/2;
+}
+
+#list {
+  grid-area: 3/1/3/3;
+}
+
+#events {
+  grid-area: 4/1/4/3;
+}
+
+#map {
+  grid-area: 5/1/5/3;
+}
+
+#info {
+  grid-area: 6/2/6/2;
 }
