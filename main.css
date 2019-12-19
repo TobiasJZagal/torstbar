@@ -28,21 +28,24 @@ body {
   top: 200px;
 
   height: 100%;
-  margin-top: -200px;
+  /*margin-top: -200px;
+  */
   grid-area: 1/2/1/2;
   display: grid;
   grid-template: 1fr/1fr 1fr;
-}
-
-.time {
-  margin-top: -200px;
-  grid-area: 1/4/1/4;
 }
 
 .time .item {
   position: sticky;
   top: 200px;
   width: 250px;
+}
+.time {
+  grid-area: 1/4/1/4;
+}
+
+.time .item h3 {
+  margin-top: 0;
 }
 
 .contentContainer {
@@ -68,10 +71,6 @@ body {
   border: 12px white solid;
   transition: all 0.2s ease-in-out;
   font-family: "Raleway", sans-serif;
-}
-
-.itemList {
-  height: 300px;
 }
 
 h2 {
@@ -126,9 +125,8 @@ h2 {
 #events {
   grid-area: 4/1/4/3;
 }
-
 #map {
-  grid-area: 5/1/5/3;
+  grid-area: 5/2/5/2;
 }
 
 #info {
@@ -137,16 +135,232 @@ h2 {
 
 #pause {
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   top: 40%;
   left: 45%;
-  opacity: 0.1;
+  opacity: 0.05;
   transition: 0.5s all;
   outline: none;
+}
+
+#mute {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: 40%;
+  left: 55%;
+  opacity: 0.05;
+  transition: 0.5s all;
+  outline: none;
+}
+
+.videoContainer:hover #mute {
+  opacity: 1;
+  transition: 0.5s all;
 }
 
 .videoContainer:hover #pause {
   opacity: 1;
   transition: 0.5s all;
+}
+
+nav img {
+  height: 30px;
+  width: 30px;
+}
+
+.logo img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+nav a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  padding-left: 20px;
+  height: 100px;
+}
+
+.itemList {
+  height: 300px;
+}
+
+.drinks img {
+  width: 150px;
+  height: 150px;
+  border: 1px red solid;
+}
+
+.drinks p:nth-child(2) {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.glide__slides {
+  margin-top: 0;
+}
+
+#list .item {
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.eventContainer .item {
+  height: 350px;
+  padding: 10px;
+}
+
+.burgerMenu {
+  display: none;
+  position: absolute;
+  color: white;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+}
+#burger {
+  display: none;
+}
+
+.map-small {
+  display: none;
+}
+
+#map .item {
+  height: 600px;
+}
+
+@media screen and (max-width: 1100px) {
+  .time {
+    grid-area: 6/2/6/2;
+    width: 50%;
+  }
+
+  #map {
+    grid-area: 5/1/5/3;
+  }
+
+  .time .item {
+    width: auto;
+  }
+
+  .contentContainer {
+    position: sticky;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: black;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr/ 10px 1fr 10px 0px;
+  }
+
+  .item {
+    padding: 2px;
+  }
+
+  #info {
+    grid-area: 6/1/6/1;
+  }
+
+  #info .item {
+    padding: 20px;
+  }
+
+  .time .item {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .map-small {
+    display: inline-block;
+  }
+
+  .map-large {
+    display: none;
+  }
+
+  .burgerMenu {
+    display: inline-block;
+  }
+
+  #om .item {
+    padding: 10px;
+    height: 400px;
+  }
+
+  #vid {
+    position: absolute;
+    top: 0;
+    z-index: -20;
+    margin-bottom: -20px;
+    left: -90%;
+    height: 600px;
+    width: auto;
+  }
+
+  .videoContainer {
+    height: 600px;
+    width: auto;
+    overflow: hidden;
+  }
+
+  #pause {
+    height: 40px;
+    width: 40px;
+    top: 40%;
+    left: 42%;
+  }
+
+  #mute {
+    height: 40px;
+    width: 40px;
+    top: 40%;
+    left: 57%;
+  }
+
+  .time {
+    grid-area: 6/2/6/2;
+    width: 100%;
+  }
+
+  .time .item {
+    width: auto;
+  }
+
+  #info {
+    grid-area: 6/1/6/3;
+  }
+
+  nav {
+    position: static;
+    background-color: black;
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    padding-top: 30px;
+    right: 100px;
+  }
+
+  input:checked ~ nav {
+    display: flex;
+  }
+
+  .logo img {
+    z-index: -1;
+  }
 }

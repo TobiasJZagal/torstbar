@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" 
+      type="image/png" 
+      href="icons/Tørst-logo-2019-web-RGB.png">
     <link href="main.css" type="text/css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -17,14 +20,30 @@
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Tørst Bar</title>
   </head>
   <body>
     <div class="container">
       <div class="videoContainer">
-        <input id="pause" type="image" src="icons/pause.png" />
-        <video autoplay muted loop id="vid">
-          <source src="Concerting.mp4" type="video/mp4" />
+        <input type="checkbox" id="burger">
+        <label for="burger" class="burgerMenu">&#9776</label>
+        <nav>
+          <a class="linkOm" href="#om">OM</a>
+          <a class="linkEvents" href="#events">EVENTS</a>
+          <a class="linkInfo" href="#info">INFO</a>
+          <a
+            href="https://www.facebook.com/toerstbar/?__tn__=%2Cd%3C-R&eid=ARCkhkJX3NCCeqlSFZp0QJZAJVtr13wZi8mFj6L9_H0j6x1mUeJVz0CdtpUKNOiIYVvoZbGGxaUjZ4QR" >
+            <img src="icons/facebook.png"
+          /></a>
+        </nav>
+        <a href="index.html" class="logo">
+          <img src="icons/Tørst-logo-2019-web-RGB.png" />
+        </a>
+
+        <input id="pause" type="image" src="icons/pauseW.png" />
+        <input id="mute" type="image" src="icons/volumeW.png" />
+        <video autoplay id="vid">
+          <source src="Tørstbar-video.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="contentContainer">
@@ -42,12 +61,16 @@
 
           <div id="menu" class="contentSection">
             <h2>MENU</h2>
+            <a href="https://lookaside.fbsbx.com/file/T%C3%B8rst%20Barkort%20nov2014.pdf?token=AWwc1aXUghkMqf4KIkiVnF2jNnSrRJNQpxG9D04AZeQJLLUKlwLods3U-luF-0YoXyJI930vbhRx1S4GPa7bKvieIyee6X16QkOyzawiYTqGGM5g86LPokP6zJxGz-xEPfkrLhoV_eLyjnCSnY63O16LEGtGUziUy7h-l9XbwRoVWQ">
             <div class="item">MENU</div>
+            </a>
           </div>
 
           <div id="booking" class="contentSection">
             <h2>BOOKING</h2>
+            <a href="index.html">
             <div class="item">BOOKING</div>
+            </a>
           </div>
 
           <div id="list" class="contentSection">
@@ -56,67 +79,74 @@
               <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                   <li class="glide__slide">
-                    <h1>test</h1>
+                    <div class="drinks">
+                      <img src="icons/russian.jpg" />
+                      <p>White russian</p>
+                      <p>80kr</p>
+                    </div>
                   </li>
-                  <li class="glide__slide">1</li>
-                  <li class="glide__slide">2</li>
+                  <li class="glide__slide">
+                    <div class="drinks">
+                      <img src="icons/twister.jpg" />
+                      <p>Twister</p>
+                      <p>99kr</p>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="drinks">
+                      <img src="icons/mojito.jpg" />
+                      <p>Mojito</p>
+                      <p>80kr</p>
+                    </div>
+                  </li>
                 </ul>
-              </div>
-              <div class="glide__arrows" data-glide-el="controls">
-                <button
-                  class="glide__arrow glide__arrow--left"
-                  data-glide-dir="<"
-                >
-                  prev
-                </button>
-                <button
-                  class="glide__arrow glide__arrow--right"
-                  data-glide-dir=">"
-                >
-                  next
-                </button>
               </div>
             </div>
           </div>
 
           <div id="events" class="contentSection">
             <h2>EVENTS</h2>
-            <div class="item">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate
-            </div>
+            <div class="eventContainer"></div>
           </div>
 
           <div id="map" class="contentSection">
             <h2>MAP</h2>
-            <div class="item">MAP</div>
+            <div class="item">
+                <div class="mapouter  map-large"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=t%C3%B8rstbar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com">whta is my ip</a></div><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div>
+                <div class="mapouter map-small"><div class="gmap_canvas "><iframe width="400" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=t%C3%B8rstbar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com">whta is my ip</a></div><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div>
+            </div>
           </div>
 
           <div id="info" class="contentSection">
             <h2>INFO</h2>
             <div class="item">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim
+              <p>Kontakt</p>
+              <p>
+                info@toerstbar.dk
+              </p>
+              <p>
+                +45 69 69 20 22
+              </p>
             </div>
           </div>
         </div>
 
         <div class="time">
-          <div class="item"></div>
+          <div class="item">
+            <h3>Åbningstider</h3>
+            <p>Onsdag 18 – 02</p>
+            <p>Torsdag 18 – 04</p>
+            <p>Fredag 15 – 05</p>
+            <p>Lørdag 16 – 05</p>
+          </div>
         </div>
       </div>
     </div>
 
     <template id="tempSection">
-      <div id="itemTemp" class="item">
-        <div class="colorTag"></div>
-        <div class="tekstContainer"></div>
-        <h1 id="titleTemp"></h1>
-        <p id="columnTemp"></p>
+      <div class="item">
+        <h3 class="headerEvent"></h3>
+        <p class="textEvent"></p>
       </div>
     </template>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
